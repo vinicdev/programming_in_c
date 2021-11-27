@@ -1,0 +1,123 @@
+Aluno: João Vinicius Cardoso da Silva
+Turma: TADS2021
+
+
+Ex 01 - 1. Faça um programa em C que receba um vetor de 10 elementos:
+    •Preencha o vetor com valores;
+    •Mostre os seus valores na tela;
+
+    /*
+        Nome: João Vinicius Cardoso da Silva
+        Data 27/11/2021
+        Função: Recebe uma função que receba 10 elementos.
+    */
+
+    #include <stdio.h>
+    #include <stdlib.h>
+
+    int main() {
+        system("clear");
+        int vetor[10];
+
+        for(int cont = 0; cont < 10; cont++) {
+            printf("Informe um número: ");
+            scanf("%d", &vetor[cont]);
+        }
+        system("clear");
+        for(int cont = 0; cont <10; cont++) {
+            printf("Valor[%d]: %d\n", cont, vetor[cont]);
+        }
+}
+
+Ex02 - 2. Elaborar um programa em C que leia 8 números inteiros em um Vetor A. Construir um Vetor B de mesmo
+tamanho que A onde os valores dos elementos serão os do Vetor A multiplicados por 3 ( B[x] = A[x] * 3 ). Exiba
+os valores dos elementos de B.
+
+/*
+    Nome: João Vinicius Cardoso da Silva
+    Data 27/11/2021
+    Função: Recebe 2 valores em vetores diferentes e faça a multiplicação deles por 3.
+
+    2. Elaborar um programa em C que leia 8 números inteiros
+    em um Vetor A. Construir um Vetor B de mesmo
+    tamanho que A onde os valores dos elementos serão os
+    do Vetor A multiplicados por 3 ( B[x] = A[x] * 3 ). Exiba
+    os valores dos elementos de B.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    system("clear");
+    int vetorA[8], vetorB[8];
+
+    for(int cont = 0; cont < 8; cont++) {
+        printf("Informe  vetorA: ");
+        scanf("%d", &vetorA[cont]);
+    }
+    system("clear");
+    for(int cont = 0; cont < 8; cont++) {
+        vetorB[cont] = vetorA[cont] * 3;
+        printf("Valor do vetorB[%d]: %d\n", cont, vetorB[cont]);
+    }
+}
+
+
+Ex03 - 
+
+/*
+    Nome: João Vinicius Cardoso da Silva
+    Data 27/11/2021
+    Função: Recebe uma função que receba 10 elementos e o mostra o inverso.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    system("clear");
+    int vetor[10];
+
+    for(int cont = 0; cont < 10; cont++) {
+        printf("Informe um número: ");
+        scanf("%d", &vetor[cont]);
+    }
+    system("clear");
+    for(int cont = 9; cont > -1; cont--) {
+        printf("Valor[%d]: %d\n", cont, vetor[cont]);
+    }
+}
+
+Ex04 - 
+
+/*
+    Nome: João Vinicius Cardoso da Silva
+    Data 27/11/2021
+    Função: Criar um vetor que receba 12 elementos, os números que forem impar serão multiplicados por 2.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    system("clear");
+    int vetorX[12], vetorZ[12], div, multi;
+
+    for(int cont = 0; cont < 12; cont++) {
+        printf("Informe um número: ");
+        scanf("%d", &vetorX[cont]);
+    }
+    system("clear");
+    for(int cont = 0; cont < 12; cont++) {
+        div = vetorX[cont] % 2;
+        if(div == 0){
+            vetorZ[cont] = vetorX[cont] * 2;
+            printf("Valor[%d]: %d\n", cont, vetorZ[cont]);
+
+        } else {
+            vetorZ[cont] = vetorX[cont];
+            printf("Valor[%d]: %d\n", cont, vetorZ[cont]);
+        }
+    }
+}
